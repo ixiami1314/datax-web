@@ -32,8 +32,8 @@ spring:
     port: 25
     #username: xxx@qq.com
     #password: xxx
-    username: ${mail.username}
-    password: ${mail.password}
+    username: ${mail.username:some}
+    password: ${mail.password:some}
     properties:
       mail:
         smtp:

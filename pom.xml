@@ -54,6 +54,14 @@
         <oshi.core.version>3.5.0</oshi.core.version>
 
         <phoenix.version>5.0.0-HBase-2.0</phoenix.version>
+
+        <!-- ====================================== -->
+        <!-- 配置远程docker服务地址，镜像打包名称前缀     -->
+        <!-- ====================================== -->
+        <remote.docker.prefix>uni-manage</remote.docker.prefix>
+        <!-- <remote.docker.ip>172.16.24.248</remote.docker.ip>-->
+        <remote.docker.ip>192.168.200.65</remote.docker.ip>
+        <remote.docker.port>2375</remote.docker.port>
     </properties>
 
 </project>
