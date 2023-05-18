@@ -1,12 +1,12 @@
 # web port
 server:
-  port: ${server.port}
+  port: ${DX_EXECUTOR_PORT:9989}
   #port: 8081
 
 # log config
 logging:
   config: classpath:logback.xml
-  path: ${data.path}/applogs/executor/jobhandler
+  path: ${DX_PATH:/data}/applogs/executor/jobhandler
   #path: ./data/applogs/executor/jobhandler
 
 datax:
@@ -14,15 +14,15 @@ datax:
     admin:
       ### datax admin address list, such as "http://address" or "http://address01,http://address02"
       #addresses: http://127.0.0.1:8080
-      addresses: http://127.0.0.1:${datax.admin.port}
+      addresses: http://datax:${DX_SERVER_PORT:9988}
     executor:
       appname: datax-executor
       ip:
       #port: 9999
-      port: ${executor.port:9999}
+      port: ${DX_EXECUTOR_JOB_PORT:9990}
       ### job log path
       #logpath: ./data/applogs/executor/jobhandler
-      logpath: ${data.path}/applogs/executor/jobhandler
+      logpath: ${DX_PATH:/data}/applogs/executor/jobhandler
       ### job log retention days
       logretentiondays: 30
     ### job, access token
@@ -30,7 +30,7 @@ datax:
 
   executor:
     #jsonpath: D:\\temp\\executor\\json\\
-    jsonpath: ${json.path}
+    jsonpath: ${DX_PATH:/data}/applogs/executor/json/
 
   #pypath: F:\tools\datax\bin\datax.py
-  pypath: ${python.path}
+  pypath: ${DX_PATH:/data}/bin/datax.py

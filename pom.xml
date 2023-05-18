@@ -60,7 +60,7 @@
         <!-- ====================================== -->
         <remote.docker.prefix>uni-manage</remote.docker.prefix>
         <!-- <remote.docker.ip>172.16.24.248</remote.docker.ip>-->
-        <remote.docker.ip>192.168.200.131</remote.docker.ip>
+        <remote.docker.ip>192.168.200.60</remote.docker.ip>
         <remote.docker.port>2375</remote.docker.port>
     </properties>
 
