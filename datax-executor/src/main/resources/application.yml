@@ -14,7 +14,7 @@ datax:
     admin:
       ### datax admin address list, such as "http://address" or "http://address01,http://address02"
       #addresses: http://127.0.0.1:8080
-      addresses: http://datax:${DX_SERVER_PORT:9988}
+      addresses: ${DX_ADMIN_URL:localhost}
     executor:
       appname: datax-executor
       ip:
